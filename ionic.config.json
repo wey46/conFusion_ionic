@@ -1,0 +1,8 @@
+{
+  "name": "conFusion",
+  "app_id": "d528f5f1",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
