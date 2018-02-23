@@ -23,20 +23,20 @@ export class LeaderProvider {
 
   getLeaders(): Observable<Leader[]>{
     return this.http.get(baseURL + 'leaders')
-                    .map(res => {return this.processHttpMsgService.extractData(res);})
-                    .catch(error => {return this.processHttpMsgService.handleError(error); })
+      .map(res => {return this.processHttpMsgService.extractData(res);})
+      .catch(error => {return this.processHttpMsgService.handleError(error); })
   }
 
   getLeader(id: number): Observable<Leader>{
     return this.http.get(baseURL + 'leaders/' + id)
-                    .map(res => {return this.processHttpMsgService.extractData(res); })
-                    .catch(error => {return this.processHttpMsgService.handleError(error); })
+      .map(res => {return this.processHttpMsgService.extractData(res); })
+      .catch(error => {return this.processHttpMsgService.handleError(error); })
   }
 
   getFeaturedLeader(): Observable<Leader> {
     return this.http.get(baseURL + 'leaders?featured=true')
-                    .map(res => {return this.processHttpMsgService.extractData(res)[0]; })
-                    .catch(error => {return this.processHttpMsgService.handleError(error); })
+      .map(res => {return this.processHttpMsgService.extractData(res)[0]; })
+      .catch(error => {return this.processHttpMsgService.handleError(error); })
   }
 
 }

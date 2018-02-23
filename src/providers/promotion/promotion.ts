@@ -23,20 +23,20 @@ export class PromotionProvider {
 
   getPromotions(): Observable<Promotion[]> {
     return this.http.get(baseURL + 'promotions')
-                    .map(res => { return this.processHttpMsgService.extractData(res); })
-                    .catch(error => { return this.processHttpMsgService.handleError(error); });
+      .map(res => { return this.processHttpMsgService.extractData(res); })
+      .catch(error => { return this.processHttpMsgService.handleError(error); });
   }
 
   getPromotion(id: number): Observable<Promotion> {
     return  this.http.get(baseURL + 'promotions/'+ id)
-                    .map(res => { return this.processHttpMsgService.extractData(res); })
-                    .catch(error => { return this.processHttpMsgService.handleError(error); });
+      .map(res => { return this.processHttpMsgService.extractData(res); })
+      .catch(error => { return this.processHttpMsgService.handleError(error); });
   }
 
   getFeaturedPromotion(): Observable<Promotion> {
     return this.http.get(baseURL + 'promotions?featured=true')
-                    .map(res => { return this.processHttpMsgService.extractData(res)[0]; })
-                    .catch(error => { return this.processHttpMsgService.handleError(error); });
+      .map(res => { return this.processHttpMsgService.extractData(res)[0]; })
+      .catch(error => { return this.processHttpMsgService.handleError(error); });
   }
 
 }

@@ -27,8 +27,11 @@ export class HomePage implements OnInit{
     @Inject('BaseURL') private BaseURL) { }
   
   ngOnInit(){
-    this.dishservice.getFeaturedDish().subscribe(dish => this.dish = dish, errmess => this.dishErrMess = <any>errmess);
-    this.promotionservice.getFeaturedPromotion().subscribe(prom => this.promotion = prom, errmess => this.promoErrMess = <any> errmess);
-    this.leaderservice.getFeaturedLeader().subscribe(leader => this.leader = leader, errmess => this.leaderErrMess = <any> errmess);
+    this.dishservice.getFeaturedDish()
+      .subscribe(dish => this.dish = dish, errmess => this.dishErrMess = <any>errmess);
+    this.promotionservice
+      .getFeaturedPromotion().subscribe(prom => this.promotion = prom, errmess => this.promoErrMess = <any> errmess);
+    this.leaderservice
+      .getFeaturedLeader().subscribe(leader => this.leader = leader, errmess => this.leaderErrMess = <any> errmess);
   }
 }
