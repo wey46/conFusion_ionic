@@ -32,7 +32,7 @@ export class MenuPage implements OnInit {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MenuPage');
+    //console.log('ionViewDidLoad MenuPage');
   }
 
   dishSelected(event, dish){
